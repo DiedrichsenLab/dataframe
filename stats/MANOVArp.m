@@ -53,7 +53,7 @@ function T=evaluate(name,QT,QE,dfT,dfE);     % Evaluates a hypothesis term
         fprintf('%10s%8.2f%6.0f\n',name,trace(QT),dfT);
     else 
         [T.lambda,T.chi2stats,T.df,T.p]=wilks_lambda(QT,QE,dfT,dfE); 
-        fprintf('%10s%8.2f%6.0f%10.2f%10.2f%6.0f%10.3f\n',name,trace(QT),dfT,T.lambda,T.chi2stats,T.df,T.p);
+        fprintf('%10s%8.2f%6.0f%10.2f%10.2f%6.0f    %10.11f\n',name,trace(QT),dfT,T.lambda,T.chi2stats,T.df,T.p);
     end;
 
 function [D,yp,v]=sumofsquares(X,y); 

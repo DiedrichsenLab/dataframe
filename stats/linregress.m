@@ -21,7 +21,7 @@ X=X(find(subset),:);
 if (intercept==1)
     X=[ones(size(y,1),1) X];
 end;
-B=inv(X'*X)*X'*y;
+B=(X'*X)\X'*y;
 
 yp=X*B;
 res=y-yp;

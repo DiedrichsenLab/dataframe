@@ -26,7 +26,7 @@ function [x_coord,PLOT,ERROR]=barplot(xvar,y,varargin)
 %       'XTickLabel', {}:   Labels for the X-axs
 %    Predetermined styles 
 %       'style_rainbow'      : Colorful style 
-%       'sytle_bold'         : Bold bars and error bars 
+%       'style_bold'         : Bold bars and error bars 
 %   Data processing options 
 %       'plotfcn'   : function over data of what should be plotted: default 'mean'
 %       'errorfcn'  : function over data to determine size of error bars: default 'stderr'

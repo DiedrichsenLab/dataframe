@@ -11,11 +11,11 @@ function [v_g, v_gs, v_gse] = reliability_var(Y, subj_vec, part_vec, varargin)
 %       are i.i.d, we can estimate the term variances as follows:
 %       
 %       Across subjects:
-%       v_g = E[y_ij, y_kl]
+%       v_g = E[y_ij' y_kl]
 %       Within subject, Across run:
-%       v_g + v_s = E[y_ij, y_ik]
+%       v_g + v_s = E[y_ij' y_ik]
 %       Within observation/partition:
-%       v_g + v_s + v_e = E[y_ij, y_ij]
+%       v_g + v_s + v_e = E[y_ij' y_ij]
 %
 %       To develop estimators for these quantities we replace the 
 %       Expectation with the mean over all possible pairings.

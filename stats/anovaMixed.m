@@ -211,7 +211,7 @@ if (verbose)
         fprintf('-------------------------------------------------\n');
 
    for i=1:size(results.eff,2)
-        fprintf('%12s  %6.4f  %6.3f  %3.0d  %3.0d\n',results.eff(1,i).Name,results.eff(1,i).p,results.eff(1,i).F,results.eff(1,i).DF,results.eff(1,i).errDF);
+        fprintf('%12s  %6.6f  %6.3f  %3.0d  %3.0d\n',results.eff(1,i).Name,results.eff(1,i).p,results.eff(1,i).F,results.eff(1,i).DF,results.eff(1,i).errDF);
    end 
 end; 
 

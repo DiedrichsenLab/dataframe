@@ -206,14 +206,15 @@ results=callGLMForAnova(data,pname,xmat,pnameErr,xmatErr,subjects,intercept);
 
 % Now do printout of ANOVA: 
 if (verbose)
-   % fprintf('reach/att x own/distr x exp (for tj & nb distr==4):\n');
-        fprintf('%12s  %6s  %6s  %3s  %3s\n','Name','p','F','df1','df2'); 
-        fprintf('-------------------------------------------------\n');
+    fprintf('%20s  %22s  %8s  %4s  %4s\n', 'Name', 'p', 'F', 'df1', 'df2'); 
+    fprintf('--------------------------------------------------------------\n');
 
-   for i=1:size(results.eff,2)
-        fprintf('%12s  %6.6f  %6.3f  %3.0d  %3.0d\n',results.eff(1,i).Name,results.eff(1,i).p,results.eff(1,i).F,results.eff(1,i).DF,results.eff(1,i).errDF);
-   end 
-end; 
+    for i = 1:size(results.eff, 2)
+        fprintf('%20s  %22.16e  %8.3f  %4.0f  %4.0f\n', results.eff(1,i).Name, ...
+                results.eff(1,i).p, results.eff(1,i).F, ...
+                results.eff(1,i).DF, results.eff(1,i).errDF);
+    end
+end
 
 
 %-----------------------end of main function-------------------------------

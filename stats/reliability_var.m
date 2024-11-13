@@ -140,7 +140,7 @@ for k = 1:length(conds)
         
         % sum of diagonal elems (y_ij' * y_ij):
         tmp_v_gse = trace(B)/N/length(subjects);
-
+        
         % sum of off-diagonal elems (y_ij' * y_ik):
         mean_cov = B .* (1-eye(N));
         mean_cov = sum(mean_cov(:))/(N*(N-1));
